@@ -190,5 +190,9 @@ bar {
 # Add screen lock keyboard shortcut
 bindsym +$mod+Control+l exec "i3lock -c 000000"
 
-exec_always xinput set-prop 10 312 1
-exec_always feh --bg-fill $HOME/Pictures/Wallpaper/galaxy_nebula_blurring_stars_65152_1920x1200.jpg
+# Assign application to specific workstations
+assign [class="Google-chrome"] number $ws2
+assign [class="Microsoft-edge"] number $ws3
+
+exec_always --no-startup-id xinput set-prop 10 312 1
+exec_always --no-startup-id feh --bg-fill $HOME/Pictures/Wallpaper/galaxy_nebula_blurring_stars_65152_1920x1200.jpg
